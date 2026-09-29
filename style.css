@@ -17,10 +17,10 @@
 }
 
 :root {
-  --bg-color: #081b29;
-  --second-bg-color: #112e42;
-  --text-color: #ededed;
-  --main-color: #00abf0;
+  --bg-color: white;
+  --second-bg-color: white;
+  --text-color: #616161;
+  --main-color: #46B3DF;
 }
 
 html {
@@ -51,7 +51,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(8, 27, 41, 0.9);
+  background: white;
   backdrop-filter: blur(10px);
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -60,7 +60,7 @@ section {
 .logo {
   font-size: 2.8rem;
   font-weight: 700;
-  color: #fff;
+  color: #616161;
 }
 
 .logo span {
@@ -74,7 +74,7 @@ section {
 .navbar a {
   margin-left: 4rem;
   font-size: 1.7rem;
-  color: #fff;
+  color: #616161;
   transition: 0.3s;
 }
 
@@ -121,11 +121,11 @@ section {
 }
 
 .home-img img {
-  width: 500px;
-  height: 500px;
+  width: 460px;
+  height: 550px;
   object-fit: cover;
   border-radius: 50%;
-  border: 6px solid var(--main-color);
+  border: 3px solid var(--main-color);
   box-shadow: 0 0 40px rgba(0, 171, 240, 0.5);
   animation: float 4s ease-in-out infinite;
 }
@@ -157,16 +157,15 @@ section {
   align-items: center;
   width: 45px;
   height: 45px;
-  border: 2px solid var(--main-color);
   border-radius: 50%;
-  color: var(--main-color);
+  background: rgb(80, 73, 73);
+  color: var(--bg-color);
   font-size: 2rem;
   margin-right: 15px;
   transition: 0.4s;
 }
 
 .social-media a:hover {
-  background: var(--main-color);
   color: var(--bg-color);
   box-shadow: 0 0 20px var(--main-color);
 }
@@ -279,7 +278,7 @@ section {
 .progress-bar {
   width: 100%;
   height: 15px;
-  background: #1d1d1d;
+  background: var(--text-color);
   border-radius: 50px;
   overflow: hidden;
 }
@@ -287,7 +286,7 @@ section {
 .progress-bar span {
   display: block;
   height: 100%;
-  background: linear-gradient(90deg, #00abf0, #00ffff);
+  background: linear-gradient(90deg, #46B3DF, #4cdada);
   border-radius: 50px;
 }
 
@@ -315,11 +314,14 @@ section {
   border-radius: 15px;
   text-align: center;
   transition: 0.4s;
+  border: 1px solid var(--main-color);
+
 }
 
 .services-box:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 20px rgba(0, 171, 240, 0.4);
+  
 }
 
 .services-box i {
@@ -415,13 +417,13 @@ section {
 
 .portfolio-layer h4 {
   font-size: 2.8rem;
-  color: #081b29;
+  color: white;
 }
 
 .portfolio-layer p {
   font-size: 1.5rem;
   margin: 15px 0;
-  color: #081b29;
+  color: white;
 }
 
 .portfolio-layer a {
@@ -436,7 +438,7 @@ section {
 
 .portfolio-layer i {
   font-size: 2.2rem;
-  color: #081b29;
+  color: black;
 }
 /* ==================== CONTACT ==================== */
 
@@ -475,7 +477,7 @@ section {
 .contact-info > p {
     font-size: 1.6rem;
     line-height: 1.8;
-    color: #ddd;
+    color: #616161;
     margin-bottom: 3rem;
 }
 
@@ -496,9 +498,8 @@ section {
     justify-content: center;
     align-items: center;
 
-    background: var(--main-color);
-    color: var(--bg-color);
-
+    background: rgb(80, 73, 73);
+  color: var(--bg-color);
     border-radius: 50%;
     font-size: 2.5rem;
 }
@@ -510,7 +511,7 @@ section {
 
 .contact-item p {
     font-size: 1.4rem;
-    color: #bbb;
+    color: #616161;
 }
 
 
@@ -552,8 +553,7 @@ section {
     background: var(--bg-color);
     padding: 3.5rem;
     border-radius: 20px;
-
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 20px 0px var(--main-color);
 }
 
 .contact-form form {
@@ -569,27 +569,24 @@ section {
 .input-box input,
 .contact-form textarea {
     width: 100%;
-
     padding: 1.5rem;
-
     background: var(--second-bg-color);
-
-    border: 2px solid transparent;
+    
+    /* Removed the box-shadow and added a solid border */
+    border: 2px solid var(--main-color);
+    
     outline: none;
-
     border-radius: 10px;
-
-    color: #fff;
-
+    color: var(--bg-color);
     font-size: 1.5rem;
-
     transition: 0.3s;
 }
 
 .input-box input:focus,
 .contact-form textarea:focus {
+    /* Optional: You can make the border slightly thicker or change it on focus */
     border-color: var(--main-color);
-    box-shadow: 0 0 10px rgba(0, 171, 240, 0.2);
+    box-shadow: 0 0 10px rgba(0, 171, 240, 0.2); 
 }
 
 .input-box input::placeholder,
@@ -601,8 +598,6 @@ section {
     resize: none;
     margin-bottom: 1.5rem;
 }
-
-
 /* ==================== SEND BUTTON ==================== */
 
 .submit-btn {
@@ -694,8 +689,8 @@ section {
 /*==================== FOOTER ====================*/
 
 .footer {
-  background: #081b29;
-  color: #fff;
+  background: var(--second-bg-color);
+  color: #616161;
   padding: 70px 10% 20px;
   margin-top: 100px;
 }
@@ -707,8 +702,8 @@ section {
 }
 
 .footer-logo h2 {
-  font-size: 32px;
-  color: #fff;
+  font-size: 22px;
+  color: #616161;
   margin-bottom: 15px;
 }
 
@@ -717,7 +712,7 @@ section {
 }
 
 .footer-logo p {
-  color: #bdbdbd;
+  color: #616161;
   line-height: 1.8;
   font-size: 15px;
 }
@@ -725,7 +720,7 @@ section {
 .footer h3 {
   font-size: 22px;
   margin-bottom: 20px;
-  color: #fff;
+  color: #616161;
 }
 
 .footer-links ul {
@@ -737,19 +732,19 @@ section {
 }
 
 .footer-links ul li a {
-  color: #bdbdbd;
+  color: #616161;
   text-decoration: none;
   transition: 0.3s;
   font-size: 15px;
 }
 
 .footer-links ul li a:hover {
-  color: #00abf0;
+  color: #616161;
   padding-left: 8px;
 }
 
 .footer-contact p {
-  color: #bdbdbd;
+  color: #616161;
   margin-bottom: 12px;
   font-size: 15px;
 }
@@ -760,9 +755,9 @@ section {
   align-items: center;
   width: 45px;
   height: 45px;
-  border: 2px solid #00abf0;
   border-radius: 50%;
-  color: #00abf0;
+  background: rgb(80, 73, 73);
+  color: var(--bg-color);
   text-decoration: none;
   font-size: 22px;
   margin-right: 10px;
@@ -770,10 +765,8 @@ section {
 }
 
 .footer-social a:hover {
-  background: #00abf0;
-  color: #081b29;
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px #00abf0;
+  color: var(--bg-color);
+  box-shadow: 0 0 20px var(--main-color);
 }
 
 .footer-bottom {
@@ -783,7 +776,7 @@ section {
 }
 
 .footer-bottom p {
-  color: #bdbdbd;
+  color: #616161;
   font-size: 15px;
 }
 
