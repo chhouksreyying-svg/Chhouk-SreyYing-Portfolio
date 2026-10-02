@@ -31,6 +31,7 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 section {
@@ -39,7 +40,7 @@ section {
 }
 
 /* ===============================
-   HEADER
+   HEADER & NAVBAR (DESKTOP)
 ================================= */
 
 .header {
@@ -56,32 +57,6 @@ section {
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
-@media (max-width: 768px) {
-  .header {
-    padding: 10px 15px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    font-size: 1.1rem; /* បន្ថយទំហំ Logo */
-  }
-
-  .navbar{
-    display: flex !important;
-    flex-wrap: wrap; /* ប្រសិនបើច្រើនពេក វានឹងចុះបន្ទាត់ស្អាត */
-    gap: 8px; /* បន្ថយចន្លោះរវាង Home, About, etc. */
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  .navbar a {
-    font-size: 0.85rem; /* បន្ថយទំហំអក្សរ Menu */
-    padding: 2px 4px;
-  }
-}
 
 .logo {
   font-size: 2.8rem;
@@ -95,6 +70,7 @@ section {
 
 .navbar {
   display: flex;
+  align-items: center;
 }
 
 .navbar a {
@@ -106,6 +82,35 @@ section {
 
 .navbar a:hover {
   color: var(--main-color);
+}
+
+/* ===============================
+   RESPONSIVE FOR MOBILE
+================================= */
+@media (max-width: 768px) {
+  .header {
+    padding: 1.2rem 4%; /* សម្រួល Padding ឲ្យស្អាត */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.8rem; /* បន្ថយទំហំ Logo លើ mobile */
+  }
+
+  .navbar {
+    display: flex !important;
+    flex-wrap: wrap; /* ការពារមិនឲ្យលៀនចេញក្រៅ */
+    justify-content: flex-end;
+    gap: 1rem; /* ប្រើ gap ជំនួស margin-left */
+  }
+
+  .navbar a {
+    margin-left: 0 !important; /* លុប margin ធំចេញលើ mobile */
+    font-size: 1.2rem !important; /* បន្ថយទំហំអក្សរ Menu ឲ្យល្មមភ្នែក */
+    padding: 0.2rem 0.4rem;
+  }
 }
 
 /* ===============================
