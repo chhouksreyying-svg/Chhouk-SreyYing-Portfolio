@@ -81,6 +81,33 @@ section {
 .navbar a:hover {
   color: var(--main-color);
 }
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.1rem; /* បន្ថយទំហំ Logo */
+  }
+
+  .navbar{
+    display: flex !important;
+    flex-wrap: wrap; /* ប្រសិនបើច្រើនពេក វានឹងចុះបន្ទាត់ស្អាត */
+    gap: 8px; /* បន្ថយចន្លោះរវាង Home, About, etc. */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .navbar a {
+    font-size: 0.85rem; /* បន្ថយទំហំអក្សរ Menu */
+    padding: 2px 4px;
+  }
+}
+
 
 /* ===============================
    SERVICES
